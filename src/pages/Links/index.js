@@ -1,4 +1,5 @@
 import "./links.css";
+import 'animate.css';
 import { FiArrowLeft, FiLink, FiTrash } from "react-icons/fi";
 import { Link } from 'react-router-dom'
 
@@ -15,7 +16,7 @@ export default function Links() {
       <div className="links-item">
         <button className="button-link">
           <FiLink size={18} color="#FFF" />
-          https://github.com/ponqueli
+          https://github.com/ponqueli asdfasdfasdfasdfa asdfasdfasdfasdfasdfasdfasdfas kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
         </button>
 
         <button className="button-delete">

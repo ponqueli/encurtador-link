@@ -1,50 +1,84 @@
-.links-container{
-    max-width: 1120px;
-    margin: 32px auto 0 auto;
+.links-container {
+  max-width: 1120px;
+  margin: 32px auto 0 auto;
 }
 
-.links-header{
-    display: flex;
-    flex-direction: row;
+.links-header {
+  display: flex;
+  flex-direction: row;
 }
 
-.links-header svg{
-    margin-right: 14px;
+.links-header svg {
+  margin-right: 14px;
 }
 
-.links-header h1{
-    color: #FFF;
+.links-header h1 {
+  color: #fff;
 }
 
-.links-item{
-    width: 700px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 8px;
+.links-item {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 8px;
 }
-.links-item:last-child{
-    margin-bottom: 18px;
+.links-item:last-child {
+  margin-bottom: 18px;
 }
-.button-link{
-    border: none;
+.button-link {
+  border: none;
+  width: 100%;
+  min-width: 80%;
+  border-radius: 8px;
+  height: 46px;
+  background-color: rgb(255, 255, 255, 0.15);
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-size: 18px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-link svg {
+  margin-right: 14px;
+}
+.button-delete {
+  border: none;
+  background: transparent;
+  transition: animation 0.7s;
+}
+.button-delete:hover {
+  animation: spin 1.5s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 741px) {
+  .links-container {
+    width: 90%;
+  }
+  .logo h1 {
+    font-size: 40px;
+  }
+  .links-item {
     width: 100%;
-    min-width: 80%;
-    border-radius: 8px;
-    height: 46px;
-    background-color: rgb(255,255,255, 0.15);
-    margin-right: 14px;
-    display: flex;
-    align-items: center;
-    padding: 0 14px;
-    font-size: 18px;
-    color: #FFF;
-}
-
-.button-link svg{
-    margin-right: 14px;
-}
-.button-delete{
-    border: none;
-    background: transparent;
+  }
+  .button-link {
+    width: 100%;
+  }
+  .button-link svg {
+    display: none;
+  }
 }
