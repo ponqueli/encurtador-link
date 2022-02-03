@@ -1,0 +1,39 @@
+.container-error{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-error img{
+    max-width: 300px;
+    margin: 24px 0;    
+}
+
+.container-error h1{
+    color: #FFF;
+    margin-bottom: 24px;
+}
+
+.container-error a{
+    color: #132742;
+    background-color: #FFF;
+    padding: 12px 24px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.container-error a:hover{
+    animation: headShake;
+    animation-duration:1s;
+}
+
+.container-error img:hover{
+    animation: bounce;
+    animation-duration:1s;
+}
