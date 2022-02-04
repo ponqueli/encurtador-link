@@ -12,7 +12,7 @@ export default function Menu(){
            <a className='social animate__animated animate__rollIn' href="https://www.instagram.com/jose.conto/" target="_blank">
                 <BsInstagram className='hover' color='#FFF' size={25}/>
            </a>
-           <Link class='menu-item animate__animated animate__bounceInDown' to="/links">
+           <Link className='menu-item animate__animated animate__bounceInDown' to="/links">
             Meus Links
            </Link>
         </div>
