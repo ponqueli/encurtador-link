@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import "./links.css";
 import 'animate.css';
+import "react-toastify/dist/ReactToastify.css";
 import { FiArrowLeft, FiLink, FiTrash } from "react-icons/fi";
+import { ToastContainer, toast } from "react-toastify";
 import { Link } from 'react-router-dom'
 import { getLinksSaved, deleteLink } from '../../services/storeLinks'
 import LinkItem from '../../components/LinkItem';
@@ -12,6 +14,7 @@ export default function Links() {
   const [data, setData] =  useState({})
   const [showModal, setShowModal]  = useState(false)
   const [emptyList, setEmptyList] = useState(false)
+  const [showToastDeleted, setShowToastDeleted] = useState(false)
 
   useEffect(()=>{
     async function getLinks(){
@@ -26,6 +29,19 @@ export default function Links() {
     getLinks()
   }, [])
 
+  async function showToast(message, position){
+    toast.success(message, {
+      toastId:'success-deleted-link-toast-id',
+      position,
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+
   function handleOpenLink(link){
     setData(link)
     setShowModal(true)
@@ -36,6 +52,8 @@ export default function Links() {
    if(actualLinks.length === 0){
     setEmptyList(true)
    }
+   setShowToastDeleted(true)
+   await showToast("Item excluído com sucesso!", "top-center")
    setMyLinks(actualLinks)
   }
 
@@ -71,6 +89,21 @@ export default function Links() {
         <LinkItem
           closeModal={()=> setShowModal(false)}
           content={data}
+        />
+      )}
+
+      { showToastDeleted && (
+        <ToastContainer
+          theme="light"
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
         />
       )}
     </div>

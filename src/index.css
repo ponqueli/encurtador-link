@@ -21,12 +21,6 @@ button{
   align-items: center;
   flex-direction: column;
 }
-*, ::after, ::before {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
 
 @media (min-width: 45em){
   ::-webkit-scrollbar-thumb {

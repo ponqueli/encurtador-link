@@ -71,11 +71,9 @@
 
 .empty-text{
   width: 100%;
-  height: 100vh;
   text-align: center;
   color: #fff;
   margin-top: 28px;
-
 }
 
 @keyframes spin {
