@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './home.css'
 import 'animate.css'
+import { saveLink } from '../../services/storeLinks'
 
 import Menu from '../../components/Menu'
 import LinkItem from '../../components/LinkItem'
@@ -14,7 +15,8 @@ export default function Home() {
   const [link, setLink] = useState('')
   const [data, setData] = useState({})
   const [qrCode, setQrCode] = useState('')
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false)
+  const [showToastError, setShowToastError] = useState(false)
 
   function showToast(message, position){
     toast.error(message, {
@@ -37,7 +39,9 @@ export default function Home() {
       setData(response.data)
       setShowModal(true)
       setQrCode(`https://api.qrserver.com/v1/create-qr-code/?data=${ response.data.link } &size=180x180`)
+      saveLink('@encurtaLink', response.data)
     }catch{
+      setShowToastError(true);
       showToast("Algo deu errado. Verifique se seu link está correto.", "top-center")
       setLink('')
     }
@@ -74,18 +78,22 @@ export default function Home() {
             content={ data }  
           />
         )}
-        <ToastContainer
-          theme="light"
-          position="top-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
+
+        { showToastError && (
+          <ToastContainer
+            theme="light"
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
+        )}
+       
       </div>
     );
   }
