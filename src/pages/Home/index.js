@@ -12,7 +12,7 @@ import api from '../../services/api'
 
 export default function Home() {
 
-  const [link, setLink] = useState('')
+  const [link, setLink] = useState('https://')
   const [data, setData] = useState({})
   const [qrCode, setQrCode] = useState('')
   const [showModal, setShowModal] = useState(false)
@@ -67,6 +67,7 @@ export default function Home() {
               placeholder="Cole seu link aqui..." 
               value={ link }
               onChange={(e) => setLink(e.target.value)}
+              onKeyUp={(e) => (e.key === "Enter" ? handleShortLink() : {})}
             />
           </div>
           <button onClick={handleShortLink}>Encurtar Link</button>
@@ -74,7 +75,11 @@ export default function Home() {
         <Menu/>
         { showModal && (
           <LinkItem 
-            closeModal={ ()=> setShowModal(false) }
+            closeModal={ ()=> {
+              setShowModal(false)
+              setLink('https://')
+             }
+            }
             content={ data }  
           />
         )}
