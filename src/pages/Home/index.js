@@ -15,6 +15,7 @@ export default function Home() {
   const [link, setLink] = useState('https://')
   const [data, setData] = useState({})
   const [qrCode, setQrCode] = useState('')
+  //const [urlImg, setUrlImg] = useState('.logo.png')
   const [showModal, setShowModal] = useState(false)
   const [showToastError, setShowToastError] = useState(false)
 
@@ -44,6 +45,7 @@ export default function Home() {
       setShowToastError(true);
       showToast("Algo deu errado. Verifique se seu link está correto.", "top-center")
       setLink('')
+     // setUrlImg('logo.png')
     }
   }
 
@@ -51,7 +53,7 @@ export default function Home() {
       <div className="container-home">
         <div className="logo">
         {!showModal && (
-          <img className='animate__animated animate__rubberBand' src="/logo.png" alt="sujeito link logo"/>
+          <img className='animate__animated animate__rubberBand' src="./logo.JPG" alt="encurtador link logo"/>
         )}
         {showModal && (
           <img className='animate__animated animate__rubberBand' src={qrCode} alt="qrCode"/>
