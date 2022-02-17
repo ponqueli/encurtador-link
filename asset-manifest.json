@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/encurtador-link/static/css/main.fd170247.css",
-    "main.js": "/encurtador-link/static/js/main.528892d0.js",
+    "main.js": "/encurtador-link/static/js/main.8e378316.js",
     "index.html": "/encurtador-link/index.html",
     "main.fd170247.css.map": "/encurtador-link/static/css/main.fd170247.css.map",
-    "main.528892d0.js.map": "/encurtador-link/static/js/main.528892d0.js.map"
+    "main.8e378316.js.map": "/encurtador-link/static/js/main.8e378316.js.map"
   },
   "entrypoints": [
     "static/css/main.fd170247.css",
-    "static/js/main.528892d0.js"
+    "static/js/main.8e378316.js"
   ]
 }
