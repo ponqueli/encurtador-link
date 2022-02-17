@@ -8,7 +8,8 @@ function RoutesApp(){
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/encurtador-link" element={ <Home/> }/>
+                <Route exact path="/" element={ <Home/> }/>
+                <Route exact path="/encurtador-link" element={ <Home/> }/>
                 <Route path="/links" element={ <Links/> }/>
                 <Route path="*" element={<Error/>}/>
             </Routes>

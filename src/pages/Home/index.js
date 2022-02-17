@@ -52,9 +52,9 @@ export default function Home() {
     return (
       <div className="container-home">
         <div className="logo">
-        {!showModal && (
+        {/* {!showModal && (
           <img className='animate__animated animate__rubberBand' src="./logo.JPG" alt="encurtador link logo"/>
-        )}
+        )} */}
         {showModal && (
           <img className='animate__animated animate__rubberBand' src={qrCode} alt="qrCode"/>
         )}
