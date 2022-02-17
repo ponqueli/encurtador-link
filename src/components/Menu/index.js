@@ -8,14 +8,14 @@ export default function Menu(){
         <div className='menu'>
            <a 
             className='social animate__animated animate__rollIn' 
-            href="https://www.linkedin.com/in/zeh-codes/" 
+            href="https://www.linkedin.com/in/jose-conto/" 
             target="_blank" 
             rel="noopener noreferrer"> 
                 <BsLinkedin className='hover' color='#FFF' size={25}/>
            </a>
            <a 
             className='social animate__animated animate__rollIn' 
-            href="https://www.instagram.com/jose.conto/" 
+            href="https://www.instagram.com/zeh.codes/" 
             target="_blank" 
             rel="noopener noreferrer">
                 <BsInstagram className='hover' color='#FFF' size={25}/>
