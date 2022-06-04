@@ -1,5 +1,5 @@
 # Estudando ReactJS
 
-Deixe seus links beeeem curtos. Só aqui >>> [Mágica acontece](https://github.com/facebook/create-react-app).
+Deixe seus links beeeem curtos. Só aqui >>> [Mágica acontece](https://ponqueli.github.io/encurtador-link/).
 
 ## Também salva seus links. Obrigado / de nada 😉
